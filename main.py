@@ -15,7 +15,7 @@ if __name__ == '__main__':
 
     while True:
         begin_time_efastefree = time.time()
-        run_command("python -u .\\efastefree\\main.py")
+        run_command("python -u ./efastefree/main.py")
         if time.time() - begin_time_efastefree > 30 * 60:
             print("------------------------")
             print(f"efastefree cost: {(time.time() - begin_time_efastefree) / 60.0} hours")
@@ -23,7 +23,7 @@ if __name__ == '__main__':
             print("Running count efastefree =", efastefree_cnt)
 
         begin_time_cryptowin = time.time()
-        run_command("python -u .\\cryptowin\\main.py")
+        run_command("python -u ./cryptowin/main.py")
         if time.time() - begin_time_cryptowin > 15 * 60:
             print("------------------------")
             print(f"efastefree cost: {(time.time() - begin_time_cryptowin) / 60.0} hours")
