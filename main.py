@@ -3,9 +3,9 @@ import subprocess
 
 def run_command(command):
     # windows
-    subprocess.run(command, shell=True, text=True)
+    # subprocess.run(command, shell=True, text=True)
     # linux - termux
-    # subprocess.run(command + " > /dev/null 2>&1", shell=True, text=True)
+    subprocess.run(command + " > /dev/null 2>&1", shell=True, text=True)
 
 if __name__ == '__main__':
     print("Begin at: {}".format(time.strftime("%H:%M:%S", time.localtime())))

@@ -9,9 +9,9 @@ N_EXIT = 8
 
 def run_command(command):
     # windows
-    subprocess.run(command + " > NUL", shell=True, text=True)
+    # subprocess.run(command + " > NUL", shell=True, text=True)
     # linux - termux
-    # subprocess.run(command + " > /dev/null 2>&1", shell=True, text=True)
+    subprocess.run(command + " > /dev/null 2>&1", shell=True, text=True)
 
 def take_screenshot(width = 1080, height = 1920):
     run_command("adb shell screencap /sdcard/Pictures/screenshot.raw && adb pull /sdcard/Pictures/screenshot.raw efastefree/screenshot.raw")
