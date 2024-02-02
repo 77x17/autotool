@@ -21,6 +21,8 @@ if __name__ == '__main__':
             print(f"efastefree cost: {(time.time() - begin_time_efastefree) / 3600.0} hours")
             efastefree_cnt = efastefree_cnt + 1
             print("Running count efastefree =", efastefree_cnt)
+        else:
+            print("efastefree ...")
 
         begin_time_cryptowin = time.time()
         run_command("python -u ./cryptowin/main.py")
@@ -29,3 +31,5 @@ if __name__ == '__main__':
             print(f"cryptowin cost: {(time.time() - begin_time_cryptowin) / 3600.0} hours")
             cryptowin_cnt = cryptowin_cnt + 1
             print("Running count cryptowin =", cryptowin_cnt)
+        else:
+            print("cryptowin ...")
