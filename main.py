@@ -18,18 +18,14 @@ if __name__ == '__main__':
         run_command("python -u ./efastefree/main.py")
         if time.time() - begin_time_efastefree > 30 * 60:
             print("------------------------")
-            print(f"efastefree cost: {(time.time() - begin_time_efastefree) / 3600.0} hours")
+            print(f"efastefree cost: {(time.time() - begin_time_efastefree) / 60.0} minutes")
             efastefree_cnt = efastefree_cnt + 1
             print("Running count efastefree =", efastefree_cnt)
-        else:
-            print("efastefree ...")
 
         begin_time_cryptowin = time.time()
         run_command("python -u ./cryptowin/main.py")
         if time.time() - begin_time_cryptowin > 15 * 60:
             print("------------------------")
-            print(f"cryptowin cost: {(time.time() - begin_time_cryptowin) / 3600.0} hours")
+            print(f"cryptowin cost: {(time.time() - begin_time_cryptowin) / 60.0} minutes")
             cryptowin_cnt = cryptowin_cnt + 1
             print("Running count cryptowin =", cryptowin_cnt)
-        else:
-            print("cryptowin ...")

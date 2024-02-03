@@ -130,6 +130,8 @@ def cryptoWin(start_time):
                 run_command("adb shell am force-stop com.bprogrammers.cryptowin")
                 run_command("adb shell monkey -p com.bprogrammers.cryptowin -c android.intent.category.LAUNCHER 1")
 
+                return
+
         start_time[0] = time.time()
 
         run_command("adb shell am force-stop com.bprogrammers.cryptowin")
