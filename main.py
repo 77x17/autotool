@@ -26,13 +26,15 @@ if __name__ == '__main__':
         if not is_screen_on():
             subprocess.run(['adb', 'shell', 'input', 'keyevent', 'KEYCODE_POWER'])
         
-        # begin_time_efastefree = time.time()
-        # run_command("python -u ./efastefree/main.py")
-        # if time.time() - begin_time_efastefree > 30 * 60:
-        #     print("------------------------")
-        #     print(f"efastefree cost: {(time.time() - begin_time_efastefree) / 60.0} minutes")
-        #     efastefree_cnt = efastefree_cnt + 1
-        #     print("Running count efastefree =", efastefree_cnt)
+        '''
+        begin_time_efastefree = time.time()
+        run_command("python -u ./efastefree/main.py")
+        if time.time() - begin_time_efastefree > 30 * 60:
+            print("------------------------")
+            print(f"efastefree cost: {(time.time() - begin_time_efastefree) / 60.0} minutes")
+            efastefree_cnt = efastefree_cnt + 1
+            print("Running count efastefree =", efastefree_cnt)
+        '''
 
         begin_time_cryptowin = time.time()
         run_command("python -u ./cryptowin/main.py")
