@@ -9,9 +9,9 @@ N_EXIT = 6
 
 def run_command(command):
     # windows
-    # subprocess.run(command + " > NUL", shell=True, text=True)
+    subprocess.run(command + " > NUL", shell=True, text=True)
     # linux - termux
-    subprocess.run(command + " > /dev/null 2>&1", shell=True, text=True)
+    # subprocess.run(command + " > /dev/null 2>&1", shell=True, text=True)
 
 def take_screenshot(width = 1080, height = 1920):
     run_command("adb shell screencap /sdcard/Pictures/screenshot.raw && adb pull /sdcard/Pictures/screenshot.raw cryptowin/screenshot.raw")
@@ -118,19 +118,7 @@ def cryptoWin(start_time):
                     if gem_type[i][j] == x:
                         run_command(f'adb shell input tap {135 + i * 270} {600 + j * 260}')
     
-        start_time[0] = time.time()
-
-        while not findLocation('next.png'):
-            time.sleep(1)
-            take_screenshot()
-
-            if (time.time() - start_time[0]) > 30:
-                n_ok = 0
-                start_time[0] = time.time()
-                run_command("adb shell am force-stop com.bprogrammers.cryptowin")
-                run_command("adb shell monkey -p com.bprogrammers.cryptowin -c android.intent.category.LAUNCHER 1")
-
-                return
+        time.sleep(10)
 
         start_time[0] = time.time()
 
