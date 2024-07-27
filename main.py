@@ -45,8 +45,11 @@ if __name__ == '__main__':
             print("Running count cryptowin =", cryptowin_cnt)
         
         time.sleep(600)
+        run_command(f'adb shell input tap 0 0')
         time.sleep(600)
+        run_command(f'adb shell input tap 0 0')
         time.sleep(600)
+        run_command(f'adb shell input tap 0 0')
 
         #subprocess.run(['adb', 'shell', 'input', 'keyevent', 'KEYCODE_POWER'])
         
