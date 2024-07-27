@@ -23,8 +23,8 @@ if __name__ == '__main__':
     cryptowin_cnt = 0
 
     while True:
-        if not is_screen_on():
-            subprocess.run(['adb', 'shell', 'input', 'keyevent', 'KEYCODE_POWER'])
+        #if not is_screen_on():
+            #subprocess.run(['adb', 'shell', 'input', 'keyevent', 'KEYCODE_POWER'])
         
         '''
         begin_time_efastefree = time.time()
@@ -44,5 +44,5 @@ if __name__ == '__main__':
             cryptowin_cnt = cryptowin_cnt + 1
             print("Running count cryptowin =", cryptowin_cnt)
 
-        subprocess.run(['adb', 'shell', 'input', 'keyevent', 'KEYCODE_POWER'])
+        #subprocess.run(['adb', 'shell', 'input', 'keyevent', 'KEYCODE_POWER'])
         
