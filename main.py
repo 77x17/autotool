@@ -43,6 +43,10 @@ if __name__ == '__main__':
             print(f"cryptowin cost: {(time.time() - begin_time_cryptowin) / 60.0} minutes")
             cryptowin_cnt = cryptowin_cnt + 1
             print("Running count cryptowin =", cryptowin_cnt)
+        
+        time.sleep(600)
+        time.sleep(600)
+        time.sleep(600)
 
         #subprocess.run(['adb', 'shell', 'input', 'keyevent', 'KEYCODE_POWER'])
         
