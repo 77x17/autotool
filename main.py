@@ -23,8 +23,8 @@ if __name__ == '__main__':
     # cryptowin_cnt = 0
 
     while True:
-        if not is_screen_on():
-            subprocess.run(['adb', 'shell', 'input', 'keyevent', 'KEYCODE_POWER'])
+        #if not is_screen_on():
+            #subprocess.run(['adb', 'shell', 'input', 'keyevent', 'KEYCODE_POWER'])
         
         run_command('python -u ./cryptorize/main.py')
 
