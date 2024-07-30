@@ -50,6 +50,11 @@ def findLocation(input_png, click = True, from_x = 0, from_y = 0, to_x = 1080, t
 def CryptoRize(start_time):
     take_screenshot()
 
+    if findLocation('ok.png'):
+        #print('ok')
+        time.sleep(3)
+        take_screenshot()
+
     if findLocation('playbutton.png'):
         #print('playbutton')
         time.sleep(15)
@@ -97,7 +102,7 @@ def CryptoRize(start_time):
         run_command('adb shell am force-stop com.bprogrammers.cryptorize')
         run_command('adb shell monkey -p com.bprogrammers.cryptorize -c android.intent.category.LAUNCHER 1')
         
-        print(time.time() - start_time[0])
+        #print(time.time() - start_time[0])
         start_time[0] = time.time()
         
     if time.time() - start_time[0] > 600:
